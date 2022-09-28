@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .j_middle{
+    margin-top: 10px;
+    margin-left: 190px;
+    display: flex;
+    gap: 10px;
+  }
+  .j_middle p{
+    font-size: 15px;
+  }
+  div{
+    /* border:1px solid greenyellow */
+  }
+  .j_mainbox {
+    margin: 50px 0 0 300px;
+    width: 63%;
+    height: 300px;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content:space-around;
+    gap: 30px;
+  }
+  .j_productimage{
+    height: 600px;
+}
+
+.features > h2 {
+  /* for brand name */
+  font-size: large;
+  font-weight: bold;
+  color: rgb(76, 67, 67);
+  margin-bottom: 15px;
+}
+.j_features > p {
+  margin-bottom: 15px;
+}
+h5 {
+  /* for brand original price */
+  color: gray;
+  font-weight: lighter;
+  font-size: medium;
+}
+.j_features > h2 + p {
+  /* for brand description */
+  color: gray;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.j_features > p + p {
+  color: gray;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+.j_features > div {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+.j_features > div > p {
+  color: green;
+}
+
+.j_type {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.j_type > div:first-child {
+  width: 130px;
+  height: auto;
+  background-color: gray;
+  color: white;
+  margin-left: 25px;
+}
+.j_type > div:last-child {
+  width: 165px;
+  height: auto;
+  border: 1px solid black;
+}
+.j_type > div > p {
+  padding-left: 10px;
+}
+
+.members {
+  margin-left: 25px;
+  width: 475px;
+  font-weight: lighter;
+  font-size: medium;
+  margin-bottom: 25px;
+}
+.j_sizelist {
+  display: flex;
+  justify-content: center;
+  gap: 280px;
+  cursor: pointer;
+  
+}
+.j_sizelist p{
+  margin-top: 30px;
+  font-weight: 700;
+}
+.j_size{
+  display: flex;
+  justify-content: space-around;
+}
+.j_size button{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50px;
+  font-weight: 450;
+  font-size: 17px;
+  height: 45px;
+}
+
+.j_cart{
+    display: flex;
+    justify-content: center;
+    gap:50px
+}
+.j_cart button{
+  font-size: 14px;
+  font-weight: 900;
+    padding: 5px 40px;
+}
+.j_cart button:first-child{
+  padding: 10px 70px;
+  border: none;
+  background: rgb(250, 243, 46);
+}
+.j_write{
+  margin-top: 20px;
+}
+/* .j_write hr{
+
+  
+} */
+#j_details{
+margin-top: 10px;
+margin-bottom: 10px;
+  border: transparent;
+}
+#j_details option{
+background: #fff;
+}
+#number{
+  font-size: 15px;
+  padding: 7px 10px;
+  width: 90%;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* ====================== 
+ Media Query
+========================*/
+
+@media all and (max-width: 870px) {
+  .j_middle{
+   display: none;
+  }
+  .j_mainbox{
+    width: 95%;
+    margin: auto;
+    display: block;
+  }
+}
+
+@media all and (max-width: 680px) {
+  .j_mainbox{
+    width: 95%;
+    margin: auto;
+    display: block;
+  }
+  .j_middle{
+    display: none;
+   }
+}
+
+@media all and (max-width: 500px) {
+  .j_mainbox{
+    margin: auto;
+    width: 95%;
+    display: block;
+  }
+  .j_middle{
+    display: none;
+   }
+}
