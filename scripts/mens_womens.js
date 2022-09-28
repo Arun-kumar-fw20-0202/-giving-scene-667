@@ -1,4 +1,9 @@
 
+// import {navbar} from '../components/navbar.js';
+
+// document.getElementById('navbar').innerHTML = navbar();
+
+
     function Slider() {
         const carouselSlides = document.querySelectorAll('.slide');
         const dotsSlide = document.querySelector('.dots-container');
