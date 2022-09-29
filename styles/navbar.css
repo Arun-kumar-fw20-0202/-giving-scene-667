@@ -302,8 +302,6 @@ body {
 
 /* Drop Down Button For User */
 
-
-
 .dropbtn {
     background-color: white;
     padding: 16px;
@@ -346,15 +344,13 @@ body {
     height: 3.3em;
     background-color: white;
     margin-top: -25px;
-   color:rgb(2, 2, 2);
-   font-weight: lighter;
-   
+    color:rgb(2, 2, 2);
+    font-weight: lighter;
    }
  
    #headerSectionPart > div:first-child{
      display: grid;
      grid-template-columns: repeat(3,155px);
-     /* border: 1px solid red; */
      float: left;
      margin-top: 25px;
      margin-left: -280px;
@@ -367,11 +363,9 @@ body {
    }
  
    #headerSectionPart div a:hover{
-     border-bottom: 5px solid rgb(218, 218, 7);
+     border-bottom: 5px solid #ffd835;
      border-radius: 2px;
      font-weight: bolder;
-      
-     
    }
   
   
