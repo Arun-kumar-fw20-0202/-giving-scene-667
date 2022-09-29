@@ -425,7 +425,7 @@ function navbar() {
       </div>
       
     </header>
-</div>`
+</div>`;
 }
 
 export default navbar();

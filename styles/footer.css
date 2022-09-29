@@ -1,5 +1,9 @@
-#footerBody{
+#footer{
     background: #181818;
+}
+#footer-body{
+    margin: auto;
+    width: 80%;
 }
 .footer-title{
     margin: 40px 40px;
@@ -35,11 +39,11 @@ ul li a {
     text-decoration: none;
     color: white;
 }
-.footer-col>p{
+.footer-col > p{
     color: gold;
     margin-bottom: 5px;
 }
-.footer-icons>span>i{
+.footer-icons > span > i{
     color: white;
     margin-right: 20px;
 }
@@ -47,7 +51,7 @@ form input{
     background-color: #181818;
     border: transparent;
     border-bottom: 1px solid gold;
-    font-size: 18px;
+    font-size: 15px;
 
 }
 button{
@@ -59,17 +63,19 @@ button{
 i{
     padding-right: 10px;
 }
-hr{
+.line{
     width: 95%;
     justify-content: center;
 }
-h3{
+.heading_h3{
     color: white;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-h2{
-
+.heading_h3 > p{
+    font-size: 8px;
+}
+.heading_h2{
     color: #51ccc4;
 }
 .description-row{
