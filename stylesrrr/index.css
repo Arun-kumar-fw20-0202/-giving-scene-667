@@ -1,0 +1,177 @@
+body{
+    margin:0;
+    font-family: "montserrat", sans-serif;
+}
+#margin-top-slider1{
+    height: 150px;
+    margin-top: -95px;
+}
+#slider1{
+    display:flex;
+    /* border:2px solid red; */
+    justify-content: space-evenly;
+    transition:all 0.5s ease-out ;
+}
+#slider1 > div{
+    height:500px;
+    margin-bottom: 20px;
+}
+#slider1 > div > img{
+    height:100%;
+}
+#banner1>img{
+    width:100%;
+}
+#main-offers{
+    display:flex;
+    /* justify-content: space-around; */
+    width:90%;
+    margin:20px auto;
+    text-align: center;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+#main-offers>div{
+    height:200px;
+    /* margin-right: 5%; */
+    line-height: 10px;
+    /* border: 2px solid teal; */
+}
+#main-offers>div>img{
+    height:80%;
+    border-radius: 10px;
+}
+#main-offers>div>a>h3{
+    margin-top:10px;
+    font-size: 15px;
+
+}
+a{
+    text-decoration: none;
+    color:black;
+    
+    /* background-color: red; */
+}
+/* Banner2 */
+#main-banner2{
+    /* border:1px solid red; */
+    text-align: center;
+    margin: 20px 0;
+    
+}
+#main-banner2>img{
+    width:100%;
+    margin: 10px 0;
+}
+#main-popular-h2{
+    margin:20px 0;
+}
+#main-categories{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    /* flex-wrap: wrap; */
+    width:80%;
+    margin: auto;
+    justify-content: space-evenly;
+    
+}
+#main-categories>div{
+    height:180px;
+    /* margin-right: 5%; */
+    line-height: 10px;
+    margin-right: 3%;
+    /* border: 2px solid teal;  */
+    margin-bottom: 30px;
+    text-align: center;
+}
+#main-categories>div>img{
+height:80%;
+border-radius: 10px;
+margin-bottom: 7px;
+}
+#main-popular-h2{
+    text-align: center;
+}
+/* main discount */
+#main-discount{
+    /* border: 1px solid black; */
+    text-align: center;
+    
+}
+#main-discount>div>img{
+    width: 49%;
+    margin-left: 0.5%;
+    margin-top: 20px;
+    
+}
+#main-best-seller-men{
+    /* border: 1px solid red; */
+    display:flex;
+    height: 400px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+#main-best-seller-men>div>img{
+    width:90%;
+    height:80%;
+}
+ 
+#main-best-seller-men>div>h4>span{
+    color:gray;
+    margin-left: 2%;
+    text-decoration: line-through;
+}
+.main-h3{
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#main-view-all{
+    text-decoration: underline;
+    color:#a6dfff;
+    font-size: 12px;
+    margin-bottom: 20px;
+    
+}
+
+#slider2{
+    display:flex;
+    /* border:2px solid red; */
+    justify-content: space-evenly;
+    transition:all 0.5s ease-out ;
+    margin-top: 20px;
+}
+#slider2 > div{
+    height:500px;
+    margin-bottom: 20px;
+}
+#slider2 > div > img{
+    height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* things to be updated 
+images: hover fade out
+
+*/
+
