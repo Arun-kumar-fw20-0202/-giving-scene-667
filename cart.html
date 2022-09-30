@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            padding: 0;
+        }
+        .amain{
+            min-height: 100vh;
+            width: 70%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .box{
+            position: relative;
+            width: 60%;
+            /* border: 1px solid black; */
+        }
+        .box > .head > h2{
+            font-size: 20px;
+            padding: 8px 15px;
+        }
+        .box > .top{
+            background: #fcffee;
+            padding: 1px 15px;  
+            border-radius: 5px;
+        }
+        .box > .top h5{
+            line-height: 0;
+        }
+        .box > .item{
+            display: flex;;
+            flex-direction: column;
+            padding: 10px 15px 0 10px;
+            margin: 30px 0;
+            border-radius: 10px;
+            border: 1px solid rgb(215, 215, 215);
+            /* border: 1px solid lime; */
+        }
+        .box > .item > .btnBx{
+            padding: 15px 10px 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            /* border: 1px solid red; */
+        }
+        .box > .item > .btnBx > button:first-child{
+            width: 60%;
+            border-right: 1px solid gray;;
+        }
+        .box > .item > .btnBx > button{
+            width: 100%;
+            border: none;
+            background: none;
+            padding: 15px 0;
+            color: gray;
+            border-top: 1px solid rgb(118, 118, 118);;
+        }
+        .box > .item > .details{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box > .item > .details > .deta{
+            width: 80%;
+            padding: 0px 0 30px 0;
+            /* border: 1px solid black; */
+        }
+        .box > .item > .details > .deta > select{
+            padding: 4px 10px;
+        }
+        .box > .item > .details > .deta > h4{
+            font-weight: 100;
+            color: gray;
+        }
+        .box > .item > .details > .deta > h2{
+            line-height: 0;
+            font-size: 18px;
+        }
+        .box > .item > .details > .deta > P{
+            color: green;
+        }
+        .box > .item > .details > .imgbx > img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .box > .item > .details > .imgbx{
+            /* border: 1px solid black; */
+            width: 100px;
+            /* height: 100px; */
+        }
+
+
+
+        .amain > .box2{
+            width: 40%;
+            padding: 70px 20px;
+            /* border: 1px solid black; */
+        }
+        .amain > .box2 > .top2{
+
+        }
+        .amain > .box2 > .top2 > button {
+            text-align: start;
+            width: 100%;
+            padding: 20px 20px;
+            display: flex;
+            border: none;
+            background: #fdd835;
+            cursor: pointer;
+            border-radius: 5px;
+            justify-content: space-between;
+        }
+        .amain > .box2 > .top2 > button span{
+            font-weight: 700;
+        }
+        .amain > .box2 > .top2 > p{
+            border: 1px solid rgb(221, 221, 221);
+            padding: 5px 10px;
+            font-size: 13px;
+            color: rgb(85, 85, 85);
+        }
+
+        .amain > .box2 > .bottom{
+            margin: 0;
+            padding: 0;
+            border: 1px solid rgb(181, 181, 181);
+        }
+        .amain > .box2 > .bottom > .bot1{
+            background: #f5f5f5;
+            padding: 2px 10px;
+            line-height: 0;
+        }
+        .amain > .box2 > .bottom > p{
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 10px;
+            font-size: 15px;
+        }
+        .amain > .box2 > .bottom > .btnBx2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            /* border: 1px solid black; */
+        }
+        .amain > .box2 > .bottom > .btnBx2 > button{
+            padding: 10px 80px;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            background: #42a2a2;
+            border: none;
+        }
+        .amain > .box2 > .bottom > .btnBx2 h4{
+            line-height: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="amain">
+        <div class="box">
+            <div class="head">
+                <h2>My Bag <span>3</span> Items</h1>
+            </div>
+            <div class="top">
+                <h5>Yay! You get FREE delivery on this order</h5>
+            </div>
+
+            <div class="item">
+                <div class="details">
+                    <div class="deta">
+                        <h4>Men's Black Moon Knight Graphic Printed Oversized T-Shirt</h4>
+                        <h2>₹649</h2>
+                        <p>You saved ₹300!</p>
+                        <select>
+                            <option value="" select="" disabled>Size</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="S">S</option>
+                        </select>
+                        <select>
+                            <option value="" select="" disabled>Qty</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="imgbx">
+                        <img src="https://images.bewakoof.com/t320/men-s-black-moon-knight-oversize-fit-t-shirt-522479-1659680064-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="btnBx">
+                    <button>Remove</button>
+                    <button>Move to Wishlist</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="box2">
+            <div class="top2">
+                <button>Save extra ₹80 with TriBe <span>>></span></button>
+                <p>Whistles! Get extra 10% Cashback on prepaid orders above Rs.699. Coupon code - OOF10.</p>
+                <p>Get Rs.200 instant discount on your First Purchase above Rs.999. Coupon code -NEW200</p>
+                <p>Whistles! Get extra 20% Cashback on prepaid orders above Rs.499. Coupon code - NEW20. Applicable for new customers only!</p>
+            </div>
+            <div class="bottom">
+                <div class="bot1">
+                    <h5>PRICE SUMMARY</h5>
+                </div>
+                <p>
+                    <span>Total MRP (Incl. of taxes) </span>
+                    <span>₹ 2248</span>
+                </p>
+                <p>
+                    <span>Shipping Charges</span>
+                    <span>Free</span>
+                </p>
+                <p>
+                    <span>Bag Discount</span>
+                    <span>₹ 1150</span>
+                </p>
+                <p>
+                    <span>Subtotal</span>
+                    <span>₹ 2248</span>
+                </p>
+                <div class="btnBx2">
+                    <h4>Total <p>₹ 1098</p></h4>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
