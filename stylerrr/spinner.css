@@ -1,0 +1,56 @@
+    .popup .overlay{
+        position:fixed;
+        top:50%;
+        left:50%;
+        width:120px;
+        height:120px;
+        background: #eee;
+        border-radius: 10px;
+        z-index:1;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        display: none;
+    }
+    .popup .spinner{
+        position: absolute;
+        top:51%;
+        left:51%;
+        transform: translate(-50%,-50%);
+        z-index:2;
+    }
+    .spinner {
+        border: 8px solid #eee;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border-top: 8px solid gold;
+        animation: 0.8s linear 0s infinite spinner;
+        margin: auto;
+        display: none;
+    }
+    .popup .spinner1{
+        position: absolute;
+        top:51%;
+        left:51%;
+        transform: translate(-50%,-50%);
+        z-index:2;
+    }
+    .spinner1{
+        border: 8px solid #eee;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border-top: 8px solid gold;
+        animation: 0.8s linear 0s infinite spinner;
+        margin: auto;
+        display: block;
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
