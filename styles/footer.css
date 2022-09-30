@@ -74,6 +74,7 @@ i{
 }
 .heading_h3 > p{
     font-size: 8px;
+    /* line-height: 0; */
 }
 .heading_h2{
     color: #51ccc4;
@@ -84,7 +85,7 @@ i{
 }
 .description-row>p{
     color: white;
-    line-height: 30px;
+    line-height: 20px;
 }
 
 
