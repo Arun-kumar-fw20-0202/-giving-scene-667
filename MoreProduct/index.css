@@ -1,0 +1,21 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#con {
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  gap: 20px;
+}
+#photo {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 950px) {
+  #con {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
