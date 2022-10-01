@@ -1,0 +1,189 @@
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .amain{
+            min-height: 100vh;
+            width: 100%;
+        }
+        .amain .mar{
+            padding: 5px 0;
+            border: none;
+            background-color: #e8f3e5;
+        }
+        .amain .mar p{
+            font-size: 15px;
+            line-height: 0;
+        }
+    /*  */
+    /* Sliders Css Start */
+        .slider3,
+        .slider2nd,
+        .slider{
+            position: relative;
+            max-width: 100rem; 
+            height: 26.625rem; 
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .slide2nd,
+        .slide3,
+        .slide{ 
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 26.625rem;
+            display: flex;
+            /* grid-template-columns: repeat; */
+            transition: transform 1s;
+            margin: 0 10px;
+            /* border: 5px solid black; */
+        }
+        .slide3 > img,
+        .slide2nd > img,
+        .slide > img{
+            width: 40%;
+            height: 100%;
+            margin: 0 00px;
+            object-fit: cover;
+        }
+        .dots-container3,
+        .dots-container2nd,
+        .dots-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -30px;
+            /* border: 1px solid black; */
+        }
+        .dot3,
+        .dot2nd,
+        .dot{
+            width: 25px;
+            height: 5px;
+            margin: 15px 5px;
+            border-radius: .5rem;
+            background: rgba(39,39,39, .5);
+            cursor: pointer;
+        }
+        .dot3.active,
+        .dot2nd.active,
+        .dot.active{
+            background:#272727;
+        }
+        .slide2nd {
+            display: flex;
+            justify-content: center;;
+            gap: 20px;
+            /* border: 1px solid #000; */
+        }
+        .slide2nd .aimgBx{
+            width: 350px;
+            /* border: 1px solid black; */
+        }
+        .slide2nd .aimgBx img{
+            width: 100%;
+            height: 90%;
+        }
+        .slide2nd .aimgBx h4{
+            line-height: 0;;
+        }
+    /* Sliders Css End */
+        
+
+        .amain > .add > h3{
+            line-height: 10px;
+            text-align: center;
+        }
+        .amain > .add{
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+        .amain > .add img{
+            width: 100%;
+        }
+
+        .blocks{
+            width: 80%;
+            display: grid;
+            margin: auto;
+            margin-top: 20px;
+            grid-template-columns: repeat(9,1fr);
+        }
+        .blocks .abox{
+            width: 100px;
+            text-align: center;;
+            /* border: 1px solid black; */
+        }
+        .blocks .abox img{
+            width: 100%;
+            /* height: 150px; */
+            object-fit: cover;
+        }
+        .blocks .abox h4{
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+
+        .amain > .acategories{
+            width: 100%;
+            text-align: center;
+            /* border: 1px solid black; */
+        }
+        .amain > .adiscount > h3,
+        .amain > .acategories > h3{
+            line-height: 0;
+        }
+        .amain > .acategories > .aimages{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+        }
+
+        .amain > .adiscount{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            /* border: 1px solid black;; */
+        }
+        .amain > .adiscount .aimages{
+            /* gap: 10px; */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* border: 1px solid black; */
+        }
+        .amain > .adiscount .aimages img{
+            width: 100%;
+            object-fit: cover;
+            /* border: 1px solid black; */
+        }
+
+        .amain > .bestsaler{
+            width: 100%;
+            /* border: 1px solid black;; */
+        }
+        .amain > .bestsaler > h3{
+            text-align: center;
+            line-height: 10px;
+            /* border: 1px solid black; */
+        }
+
+
+        .amain > .best_bar{
+            width: 100%;;
+            /* border: 1px solid black; */
+        }
+        .amain > .best_bar > h3{
+            text-align: center;
+            line-height: 20px;
+        }
+        .amain > .best_bar > .aimages{
+            display: flex;
+            justify-content: center;
+        }
+        .amain > .best_bar > .aimages img{
+            margin: 0 20px;
+        }
