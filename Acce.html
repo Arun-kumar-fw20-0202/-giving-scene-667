@@ -7,15 +7,25 @@
     <title>Men Home Page</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
-    <script>
-        $(function(){
-            $('#footer').load('footercopy.html')
-        })
-    </script>
+
     <link rel="stylesheet" href="./style/navbar.css" />
     <link rel="stylesheet" href="./styles/Acce.css" />
     <link rel="stylesheet" href="./styles/footerstyles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      
+
+#footer-part {
+    line-height: 20px;
+    padding: 5% 0;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: black;
+    font-family: "montserrat", sans-serif;
+}
+
+    </style>
   </head>
 
   <body>
@@ -201,11 +211,6 @@
         
     </div>
     <hr>
-    <div id="nav_bar_manu">
-        <li><a href="./index-mens.html"><P>MEN</P></a></li>
-        <li><a href="./index-women.html"><P>WOMEN</P></a></li>
-        <li><a href="Acce.html"><P>ACCESSORIES</P></a></li>
-    </div>
     
     
  
@@ -493,6 +498,20 @@
   </body>
 </html>
 <script type="module">
+
+
+import footerpart from "./components/footer.js";
+
+document.getElementById("footer").innerHTML = footerpart();
+
+import navbar from '../components/navbar.js';
+
+document.getElementById("navbar").innerHTML = navbar();
+
+
+
+
+
   // carausel 1 dom
   let slider1_img1 = document.getElementById("slider1_img1");
   let id1;
@@ -632,16 +651,6 @@
     slider2_img3.append(img23);
     j++;
   }, 1000);components
-
-  import footerpart from "./components/footer.js";
-
-  document.querySelector("#footer-part").innerHTML = footerpart();
-
-  import navbar from "./components/navbar.js";
-  console.log(navbar());
-
-  document.getElementById("navbar").innerHTML = navbar();
-
 
 
 

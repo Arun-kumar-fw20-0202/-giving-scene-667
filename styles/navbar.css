@@ -13,7 +13,6 @@ body {
 
 .headerDivWrapper{
     width: 100%;
-    z-index: 5;
     position: fixed;
     height: 79px;
     transition: top 0.3s;
@@ -22,6 +21,7 @@ body {
     padding: 0;
     outline: 0;
     font-size: 100%;
+    z-index: 999;;
 }
 
 .topBar,.topBarWrapper{
@@ -149,6 +149,7 @@ body {
 
   .wrapper .nav-links {
     display: inline-flex;
+    z-index: 99999;
   }
   .nav-links li {
     list-style: none;
