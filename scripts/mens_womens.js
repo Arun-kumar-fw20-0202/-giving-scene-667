@@ -1,6 +1,5 @@
 
 import navbar from '../components/navbar.js';
-
 document.getElementById('anavbar').innerHTML = navbar();
 
 import footerpart from '../components/footer.js';
