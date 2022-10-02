@@ -1,3 +1,12 @@
+
+import navbar from "../components/navbar.js";
+let navbar_div = document.getElementById("upper");
+navbar_div.innerHTML = navbar;
+
+import footer from "../components/footer.js";
+let footer_div = document.getElementById("lower");
+footer_div.innerHTML = footer;
+
 var redmiCover =[
 
     {image : "https://images.bewakoof.com/t320/carbon-fiber-oneplus-nord-2-mobile-cover-470488-1643295807-1.jpg",
@@ -258,3 +267,47 @@ var redmiCover =[
     },
     
 ];
+
+
+let data = [];
+
+redmiCover.forEach(function(el){
+    let box = document.createElement("div");
+    box.setAttribute("id", "box");
+    box.addEventListener("click", function(){
+        cardClick(el);
+    })
+
+    let image = document.createElement("img");
+    image.src = el.image;
+    image.style = "width:100%";
+
+    let name = document.createElement("p");
+    name.innerText = el.name;
+    name.setAttribute("id", "name");
+
+    let minibox = document.createElement("div");
+    minibox.setAttribute("id","innerBox");
+
+    let price = document.createElement("p");
+    price.innerText = el.price;
+    price.setAttribute("id", "paisa");
+
+    let discount = document.createElement("p");
+    discount.innerText = el.strikePrice;
+    discount.style = "text-decoration: line-through; color:gray";
+
+    let special = document.createElement("p");
+    special.innerText = el.speicalPrice;
+    special.setAttribute("id", "special");
+
+    minibox.append(price, discount);
+    box.append(image, name, minibox, special);
+    document.querySelector("#coverContainer").append(box);
+})
+
+function cardClick(el){
+    data.push(el)
+    localStorage.setIteml("clickData", JSON.stringify(data))
+    window.location.href = "./coverClick.html"
+}
