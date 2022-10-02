@@ -8,16 +8,16 @@
     padding: 5% 0;
     width: 100%;
     height: auto;
-    background-color: black;
+    background: black;
     color: white;
     font-family: "montserrat", sans-serif;
 }
 
 #customer-section {
-    width: 75%;
+    /* width: 100%; */
+    padding: 30px 80px;
+    background-color: black;
     margin: auto;
-
-
 }
 
 .customer-section-grid a{

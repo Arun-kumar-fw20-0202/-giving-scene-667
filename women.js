@@ -1,3 +1,8 @@
+
+import navbar from './components/navbar.js';
+document.getElementById('navbar').innerHTML = navbar();
+
+
 let wowomensdata = [
     {
       image:
@@ -389,7 +394,12 @@ let wowomensdata = [
   
       data.forEach(function(el){
           let box=document.createElement("div");
-         box.setAttribute("class","productbox")
+          box.setAttribute("class","productbox")
+
+          box.addEventListener('click', ()=> {
+            clickedPro(el);
+          })
+
           let img=document.createElement('img');
           img.src=el.image;
   
@@ -442,17 +452,79 @@ let wowomensdata = [
       }
   }
   main()
-  
-  function hl(){
-      let data=JSON.parse(localStorage.getItem("wp"));
-  
+
+  document.getElementById('lowTohight').addEventListener("click", ()=> {
+    // alert("working")
+    let data=JSON.parse(localStorage.getItem("wp"));
+        data.sort((a,b)=>a.price-b.price);
+        apnd(data)
+        console.log(data)
+  })
+  document.getElementById('highTolow').addEventListener("click", ()=> {
+    // alert("working")
+    let data=JSON.parse(localStorage.getItem("wp"));
+    
       data=data.sort((a,b)=>b.price-a.price);
       apnd(data);
       console.log(data)
+  })
+
+
+
+  function clickedPro(ele){
+    localStorage.setItem("clickedItem", JSON.stringify(ele))
   }
-  function lh(){
-      let data=JSON.parse(localStorage.getItem("wp"));
-      data.sort((a,b)=>a.price-b.price);
-      apnd(data)
-      console.log(data)
+
+
+
+
+  document.getElementById("searchFm").addEventListener("submit", (e)=> {
+    e.preventDefault();
+    
+    // 
+  let search=document.getElementById("search_product_by_name");
+  localStorage.setItem("wp",JSON.stringify(wowomensdata));
+  let data=JSON.parse(localStorage.getItem("wp"));
+  
+  function apnd(data){
+      let con=document.querySelector(".products") || document.getElementById("wd");
+      con.innerHTML=null;
+      con.id="wd";
+  
+      data.forEach(function(el){
+          let box=document.createElement("div");
+         box.setAttribute("class","productbox")
+          let img=document.createElement('img');
+          img.src=el.image;
+  
+          let brand=document.createElement("p");
+          brand.textContent=el.brand_description;
+          brand.style.color="grey"
+          brand.style.fontWeight="smaller"
+  
+          let price=document.createElement("h3");
+          price.id="pricetext"
+          price.textContent=el.price;
+  
+          let mp=document.createElement("p");
+          mp.textContent=el.member_price;
+          mp.style.fontWeight="bold";
+          mp.style.fontSize="smaller"
+          let sprice=document.createElement("p");
+          sprice.style.textDecoration="line-througn"
+          sprice.textContent=el.sprice
+          box.append(img,brand,price,sprice,mp);
+          con.append(box);
+          
+      })
   }
+
+      search.addEventListener("input",function(){
+        let fil=wowomensdata.filter(function(el){
+            return el.brand_description.toLocaleLowerCase()
+            .includes(search.value.toLocaleLowerCase());
+        });
+        apnd(fil);
+      });
+    
+  })

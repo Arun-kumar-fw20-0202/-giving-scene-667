@@ -4,6 +4,21 @@
     box-sizing: border-box;
     font-family: sans-serif;
   }
+
+  
+  #navbar{
+    z-index: 9999;
+    margin: 100px;
+  }
+
+  
+.rand{
+  position: relative;
+  top:180px;
+  z-index: 2;;
+  margin-top: 200px;
+}
+
   #reload{
     width: 60%;
     border: 20px;

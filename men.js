@@ -1,3 +1,7 @@
+import navbar from './components/navbar.js';
+    document.getElementById('navbar').innerHTML = navbar();
+    // console.log(navbar())
+
 let mensData = [
     {
         image_url:
@@ -2090,12 +2094,12 @@ function fitFilter() {
 }
 
 let slev = document.querySelector("#sleeve")
-slev.addEventListener("#change", sleeveFilter)
-function sleeveFilter() {
-    let sleeve_filter = mensData.filter(function (el) {
-        return el.sleeve === slev.value;
-    }); dis(sleeve_filter);
-}
+// slev.addEventListener("#change", sleeveFilter)
+// function sleeveFilter() {
+//     let sleeve_filter = mensData.filter(function (el) {
+//         return el.sleeve === slev.value;
+//     }); dis(sleeve_filter);
+// }
 
 let nck = document.querySelector("#neck");
 nck.addEventListener("#change", neckFilter)
@@ -2160,3 +2164,61 @@ function sortProducts() {
 
 // let prod_count = mensData.length;
 // document.querySelector(".count").textContent = "Men Clothing" + " " + "(" + `${prod_count}` + ")";
+
+
+
+
+
+// Search 
+
+
+document.getElementById("searchFm").addEventListener("submit", (e)=> {
+    e.preventDefault();
+    
+    // 
+  let search=document.getElementById("search_product_by_name");
+  localStorage.setItem("wp",JSON.stringify(wowomensdata));
+  let data=JSON.parse(localStorage.getItem("wp"));
+  
+  function apnd(data){
+      let con=document.querySelector(".products") || document.getElementById("wd");
+      con.innerHTML=null;
+      con.id="wd";
+  
+      data.forEach(function(el){
+          let box=document.createElement("div");
+         box.setAttribute("class","productbox")
+          let img=document.createElement('img');
+          img.src=el.image;
+  
+          let brand=document.createElement("p");
+          brand.textContent=el.brand_description;
+          brand.style.color="grey"
+          brand.style.fontWeight="smaller"
+  
+          let price=document.createElement("h3");
+          price.id="pricetext"
+          price.textContent=el.price;
+  
+          let mp=document.createElement("p");
+          mp.textContent=el.member_price;
+          mp.style.fontWeight="bold";
+          mp.style.fontSize="smaller"
+          let sprice=document.createElement("p");
+          sprice.style.textDecoration="line-througn"
+          sprice.textContent=el.sprice
+          box.append(img,brand,price,sprice,mp);
+          con.append(box);
+          
+      })
+  }
+
+      search.addEventListener("input",function(){
+        let fil=wowomensdata.filter(function(el){
+            return el.brand_description.toLocaleLowerCase()
+            .includes(search.value.toLocaleLowerCase());
+        });
+        apnd(fil);
+      });
+    
+  })

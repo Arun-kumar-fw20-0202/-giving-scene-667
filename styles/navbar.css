@@ -13,8 +13,8 @@ body {
 
 .headerDivWrapper{
     width: 100%;
-    z-index: 5;
-    position: fixed;
+    position: sticky;
+    top: 0;
     height: 79px;
     transition: top 0.3s;
     display: block;
@@ -22,6 +22,7 @@ body {
     padding: 0;
     outline: 0;
     font-size: 100%;
+    z-index: 999;;
 }
 
 .topBar,.topBarWrapper{
@@ -149,6 +150,7 @@ body {
 
   .wrapper .nav-links {
     display: inline-flex;
+    z-index: 99999;
   }
   .nav-links li {
     list-style: none;
@@ -287,7 +289,7 @@ body {
     background-color: #eaeaea;
 }
 
-.searchContainer>input{
+.searchContainer input{
     flex: 1;
     border: none;
     outline: none;
