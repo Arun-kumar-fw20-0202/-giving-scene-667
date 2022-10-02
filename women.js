@@ -440,7 +440,7 @@ let wowomensdata = [
           else{
               reject("issue from server")
           }
-      },6000)
+      },1000)
   });
   
   async function main(){
@@ -472,7 +472,8 @@ let wowomensdata = [
 
 
   function clickedPro(ele){
-    localStorage.setItem("clickedItem", JSON.stringify(ele))
+    localStorage.setItem("clickedItem", JSON.stringify(ele));
+    window.location.href = 'add_cart/cart.html';
   }
 
 
@@ -519,12 +520,11 @@ let wowomensdata = [
       })
   }
 
-      search.addEventListener("input",function(){
-        let fil=wowomensdata.filter(function(el){
-            return el.brand_description.toLocaleLowerCase()
-            .includes(search.value.toLocaleLowerCase());
-        });
-        apnd(fil);
+    search.addEventListener("input",function(){
+      let fil=wowomensdata.filter(function(el){
+          return el.brand_description.toLocaleLowerCase()
+          .includes(search.value.toLocaleLowerCase());
       });
-    
-  })
+      apnd(fil);
+    });
+})

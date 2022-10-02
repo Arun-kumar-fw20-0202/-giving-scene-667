@@ -2024,13 +2024,13 @@ function dis(mensData) {
         member_price.style.fontSize = "smaller"
         box.append(image, brand, brand_description, price, striked_off_price, member_price);
         box.addEventListener("click", function () {
-            redirectToProduct(el)
+            clickedPro(el)
         })
-        function redirectToProduct(el) {
-            localStorage.setItem("item", JSON.stringify(el))
-            window.location.href = "mensproductpage.html"
+        // function redirectToProduct(el) {
+        //     localStorage.setItem("item", JSON.stringify(el))
+        //     window.location.href = "mensproductpage.html"
 
-        }
+        // }
         // console.log(mensDataFromLS.length);
     });
     localStorage.setItem("MensPorducts", JSON.stringify(mensData));
@@ -2172,12 +2172,12 @@ function sortProducts() {
 // Search 
 
 
-document.getElementById("searchFm").addEventListener("submit", (e)=> {
-    e.preventDefault();
+// document.getElementById("searchFm").addEventListener("submit", (e)=> {
+//     e.preventDefault();
     
     // 
   let search=document.getElementById("search_product_by_name");
-  localStorage.setItem("wp",JSON.stringify(wowomensdata));
+//   localStorage.setItem("wp",JSON.stringify(wowomensdata));
   let data=JSON.parse(localStorage.getItem("wp"));
   
   function apnd(data){
@@ -2221,4 +2221,10 @@ document.getElementById("searchFm").addEventListener("submit", (e)=> {
         apnd(fil);
       });
     
-  })
+//   })
+
+
+  function clickedPro(ele){
+    localStorage.setItem("clickedItem", JSON.stringify(ele));
+    window.location.href = 'add_cart/cart.html';
+  }

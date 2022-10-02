@@ -11,39 +11,42 @@
     <div class="amain">
         <div class="box">
             <div class="head">
-                <h2>My Bag <span>3</span> Items</h1>
+                <h2>My Bag <span class="countItem">3</span> Items</h1>
             </div>
             <div class="top">
                 <h5>Yay! You get FREE delivery on this order</h5>
             </div>
 
-            <div class="item">
-                <div class="details">
-                    <div class="deta">
-                        <h4>Men's Black Moon Knight Graphic Printed Oversized T-Shirt</h4>
-                        <h2>₹649</h2>
-                        <p>You saved ₹300!</p>
-                        <select>
-                            <option value="" select="" disabled>Size</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="S">S</option>
-                        </select>
-                        <select>
-                            <option value="" select="" disabled>Qty</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
+            <div class="all">
+
+                <div class="item">
+                    <div class="details">
+                        <div class="deta">
+                            <h4>Men's Black Moon Knight Graphic Printed Oversized T-Shirt</h4>
+                            <h2>₹649</h2>
+                            <p>You saved ₹300!</p>
+                            <select>
+                                <option value="" select="" disabled>Size</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="S">S</option>
+                            </select>
+                            <select>
+                                <option value="" select="" disabled>Qty</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="imgbx">
+                            <img src="https://images.bewakoof.com/t320/men-s-black-moon-knight-oversize-fit-t-shirt-522479-1659680064-1.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="imgbx">
-                        <img src="https://images.bewakoof.com/t320/men-s-black-moon-knight-oversize-fit-t-shirt-522479-1659680064-1.jpg" alt="">
+                    <div class="btnBx">
+                        <button>Remove</button>
+                        <button>Move to Wishlist</button>
                     </div>
-                </div>
-                <div class="btnBx">
-                    <button>Remove</button>
-                    <button>Move to Wishlist</button>
                 </div>
             </div>
 
@@ -63,7 +66,7 @@
                 </div>
                 <p>
                     <span>Total MRP (Incl. of taxes) </span>
-                    <span>₹ 2248</span>
+                    <span id="mainTotal">₹ 2248</span>
                 </p>
                 <p>
                     <span>Shipping Charges</span>
@@ -71,18 +74,19 @@
                 </p>
                 <p>
                     <span>Bag Discount</span>
-                    <span>₹ 1150</span>
+                    <span id="discount">₹ 1150</span>
                 </p>
                 <p>
                     <span>Subtotal</span>
-                    <span>₹ 2248</span>
+                    <span id="subT">₹ </span>
                 </p>
                 <div class="btnBx2">
-                    <h4>Total <p>₹ 1098</p></h4>
-                    <button>Continue</button>
+                    <h4>Total <p id="totalprice">₹ </p></h4>
+                    <button class="place_order">Continue</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script type="module" src="scripts/cart.js"></script>

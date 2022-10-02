@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:sans-serif
+        }
+        .main{
+            margin: 0;
+            padding: 0;
+        }
+        .itemx{
+            display: flex;
+            padding: 20px 50px;
+            align-items: center;
+            gap: 20px;
+            /* border: 1px solid black; */
+        }
+        .itemx img{
+            width: 100px;
+        }
+
+        .main .box{
+            height: auto;
+            width: 450px;;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 40px;
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+            padding: 20px 30px;
+        }
+        .main .box .inputBx{
+            display:grid;
+            margin-top: 15px;
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+            /* border: 1px solid black; */
+        }
+        .main .box .inputBx button,
+        .main .box .inputBx input{
+            padding: 5px 10px;
+        }
+        .main .box .inputBx h4 > span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="itemx"></div>
+        
+        <div class="box">
+            <form class="user_details">
+                <div class="inputBx">
+                    <span>Name</span>
+                    <input type="text" id="name">
+                </div>
+                <div class="inputBx">
+                    <span>Phone</span>
+                    <input type="number" id="mobile">
+                </div>
+                <div class="inputBx">
+                    <span>Address</span>
+                    <input type="text" id="address">
+                </div>
+                <div class="inputBx">
+                    <span>Pincode</span>
+                    <input type="number" id="pin">
+                </div>
+                <div class="inputBx">
+                    <button type="submit">Place Order</button>
+                </div>
+                <div class="inputBx">
+                    <h4 class="total">Total : <span class="price"> 120</span></h4>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    function userData(n,p,a,p){
+        this.name = n;
+        this.phone = p;
+        this.address = a;
+        this.pincode = p;
+    }
+
+    let details = JSON.parse(localStorage.getItem("bookDetails"))  || []
+
+    document.querySelector('.user_details').addEventListener('submit',(e)=> {
+        e.preventDefault();
+        let name = this.name.value;
+        let phone = this.mobile.value;
+        let address = this.address.value;
+        let pin = this.pin.value;
+
+        let obj = new userData(name,phone,address,pin)
+        console.log(obj)
+        localStorage.setItem('bookDetails', JSON.stringify(obj));
+
+        alert("Order Confirmed")
+        document.querySelector('.user_details').reset();;
+        
+    })
+
+    
+let cartValues = JSON.parse(localStorage.getItem("cart")) || [];
+fetchData(cartValues)
+    function fetchData(data){
+        let itemx = document.querySelector('.itemx');
+        let total = 0;
+        data.forEach(function(ele){
+            total += ele.price;
+            let img = document.createElement('img')
+            img.src = ele.image;
+
+            itemx.append(img)
+            document.querySelector('.price').innerText = `₹ ${total}`
+        })
+    }
+
+
+
+</script>
+</html>
